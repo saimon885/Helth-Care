@@ -4,6 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Navigation, Autoplay } from "swiper/modules";
+// import Link from "next/link";
 
 const Banner = () => {
   return (
@@ -20,7 +21,7 @@ const Banner = () => {
             className="hero min-h-[70vh] md:min-h-screen"
             style={{
               backgroundImage:
-                "url(https://images.unsplash.com/photo-1584515933487-779824d29309)",
+                "url(https://plus.unsplash.com/premium_photo-1675807263788-5708e2bffdb5?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8SGVhbHRoJTIwY2FyZXxlbnwwfHwwfHx8MA%3D%3D)",
             }}
           >
             <div className="hero-overlay bg-black/60"></div>
@@ -34,7 +35,7 @@ const Banner = () => {
                   home care needs. Safe and professional support for your
                   family.
                 </p>
-                <button className="btn btn-primary">Book Caregiver</button>
+                {/* <button className="btn btn-primary">Book Caregiver</button> */}
               </div>
             </div>
           </div>
@@ -58,7 +59,7 @@ const Banner = () => {
                   Experienced babysitters ready to take care of your children
                   with love, safety, and responsibility.
                 </p>
-                <button className="btn btn-secondary">Find Babysitter</button>
+                {/* <button className="btn btn-primary">Find Babysitter</button> */}
               </div>
             </div>
           </div>
@@ -69,7 +70,7 @@ const Banner = () => {
             className="hero min-h-[70vh] md:min-h-screen"
             style={{
               backgroundImage:
-                "url(https://images.unsplash.com/photo-1582750433449-648ed127bb54)",
+                "url(https://plus.unsplash.com/premium_photo-1666299677059-54f840ab8fa0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8SGVhbHRoJTIwY2FyZXxlbnwwfHwwfHx8MA%3D%3D)",
             }}
           >
             <div className="hero-overlay bg-black/60"></div>
@@ -82,7 +83,9 @@ const Banner = () => {
                   Compassionate caregivers providing daily support and
                   assistance for elderly family members at home.
                 </p>
-                <button className="btn btn-accent">Explore Services</button>
+                {/* <Link href={"/services"} className="btn btn-primary">
+                  Explore Services
+                </Link> */}
               </div>
             </div>
           </div>

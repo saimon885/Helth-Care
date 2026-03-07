@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import React, { useState } from "react";
-import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 const LoginCard = () => {
   const [show, setShow] = useState(false);
@@ -52,14 +53,17 @@ const LoginCard = () => {
               />
               <span
                 onClick={() => setShow(!show)}
-                className="absolute right-3 top-3 cursor-pointer text-gray-500"
+                className="absolute right-3 top-4 cursor-pointer text-gray-500"
               >
                 {show ? <FaEyeSlash /> : <FaEye />}
               </span>
             </div>
           </div>
 
-          <button type="submit" className="btn btn-primary w-full text-white">
+          <button
+            type="submit"
+            className="btn bg-gradient-to-r from-primary to-secondary  font-medium shadow-lg transform transition w-full text-white"
+          >
             Login
           </button>
         </form>
@@ -67,7 +71,7 @@ const LoginCard = () => {
         <div className="divider">OR</div>
 
         <button className="btn w-full border border-gray-300 flex items-center gap-2 justify-center">
-          <FaGoogle />
+          <FcGoogle size={22} />
           Continue with Google
         </button>
         <p className="text-center text-sm text-gray-500 mt-4">

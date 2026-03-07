@@ -109,7 +109,7 @@ const RegisterCard = () => {
           </div>
 
           <input
-            className="btn btn-primary w-full text-white"
+            className="btn bg-gradient-to-r from-primary to-secondary  font-medium shadow-lg transform transition w-full text-white"
             type="submit"
             value="Register"
           />

@@ -1,37 +1,37 @@
 [
   {
     "name": "Baby Care",
-    "description": "Professional babysitting service for children. Our trained caregivers ensure safety, playtime, and proper attention.",
+    "description": "Professional babysitting service for children. Our trained caregivers ensure complete safety, engaging playtime activities, proper attention to your child's needs, and a nurturing environment that supports emotional and physical development throughout their stay.",
     "price_per_hour": 200,
     "image": "https://plus.unsplash.com/premium_photo-1711311021816-efcac4a6806d?q=80&w=869&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   },
   {
     "name": "Elderly Care",
-    "description": "Compassionate care for elderly people including daily assistance, companionship, and medication reminders.",
+    "description": "Compassionate care for elderly people including daily assistance, companionship, medication reminders, help with mobility, personal hygiene, and overall support to maintain comfort, dignity, and quality of life in a safe and loving environment.",
     "price_per_hour": 250,
     "image": "https://images.unsplash.com/photo-1758691462353-36b215702253?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fE9sZCUyMHBlcnNvbiUyMGFzc2lzdGFuY2V8ZW58MHx8MHx8fDA%3D"
   },
   {
     "name": "Sick People Care",
-    "description": "Home care service for sick patients including monitoring health, medicine support, and basic nursing assistance.",
+    "description": "Home care service for sick patients providing continuous health monitoring, timely medicine administration, basic nursing assistance, emotional support, and a clean, comfortable environment to promote recovery and well-being while reducing the stress on families.",
     "price_per_hour": 300,
     "image": "https://images.unsplash.com/photo-1591281866515-fbe57a541bff?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fFNpY2slMjBQZW9wbGUlMjBDYXJlfGVufDB8fDB8fHww"
   },
   {
     "name": "Special Needs Care",
-    "description": "Expert caregivers trained to assist individuals with special needs, providing personalized support and safety.",
+    "description": "Expert caregivers trained to assist individuals with special needs, providing personalized support, structured routines, emotional encouragement, and safety measures tailored to each person's unique requirements, promoting independence and a higher quality of life.",
     "price_per_hour": 350,
     "image": "https://media.istockphoto.com/id/1165981605/photo/getting-outside-was-a-lovely-suggestion.webp?a=1&b=1&s=612x612&w=0&k=20&c=3xtUi0QYqwBJNSlh24fPwreZ6DaxZlGZ10nhQMBvhg8="
   },
   {
     "name": "Night Care Service",
-    "description": "Reliable overnight caregiving for children, elderly, or patients to ensure safety and peace of mind.",
+    "description": "Reliable overnight caregiving for children, elderly, or patients, ensuring their safety, comfort, and peace of mind throughout the night. Services include supervision, assistance with nighttime routines, emergency readiness, and attentive care to support uninterrupted rest for both the individual and their family.",
     "price_per_hour": 400,
     "image": "https://plus.unsplash.com/premium_photo-1661934146337-547289317fdd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTd8fE5pZ2h0JTIwU2VydmljZXxlbnwwfHwwfHx8MA%3D%3D"
   },
   {
     "name": "Postpartum Care",
-    "description": "Professional care for mothers and newborns after delivery. Includes feeding support, health monitoring, and rest facilitation.",
+    "description": "Professional care for mothers and newborns after delivery, including feeding support, health monitoring, rest facilitation, emotional guidance, assistance with newborn routines, and educational advice to ensure the well-being, recovery, and bonding of both mother and child during the crucial postpartum period.",
     "price_per_hour": 450,
     "image": "https://images.unsplash.com/photo-1766299892744-a0b9d4e11707?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8UG9zdHBhcnR1bSUyMENhcmV8ZW58MHx8MHx8fDA%3D"
   }

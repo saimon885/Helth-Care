@@ -39,7 +39,7 @@ const Navbar = () => {
           </div>
           <ul
             tabIndex="-1"
-            className="menu menu-sm z-15 dropdown-content bg-base-100 rounded-box  mt-3 w-52 p-2 shadow"
+            className="menu menu-sm z-15 dropdown-content bg-base-100 text-[16px] rounded-box  mt-3 w-52 p-2 shadow"
           >
             {Links}
           </ul>
@@ -49,10 +49,13 @@ const Navbar = () => {
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
-        <ul className="menu menu-horizontal px-1">{Links}</ul>
+        <ul className="menu menu-horizontal px-1 text-[16px] ">{Links}</ul>
       </div>
       <div className="navbar-end">
-        <Link href={"/login"} className="btn btn-primary hover:btn-secondary">
+        <Link
+          href={"/login"}
+          className="btn bg-gradient-to-r from-primary to-secondary text-white font-medium shadow-lg  transform transition"
+        >
           LogIn
         </Link>
       </div>
