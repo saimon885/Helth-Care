@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  /* Force only the light theme to be included */
+  themes: [ "light"];
+  /* Disable automatic dark mode based on system settings */
+  darktheme: "light";
+}
+
+@plugin "daisyui/theme" {
+  name: "light";
+  default: true;
+  /* Brand */
+  --color-primary: #1a5f7a;
+  --color-secondary: #159895;
+  --color-accent: #1A1A1A;
+
+  /* Base */
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(97% 0.01 95);
+  --color-base-300: oklch(92% 0.015 95);
+
+  --color-neutral-content: oklch(96% 0 0);
+
+  /* Feedback */
+  --color-success: oklch(70% 0.17 145);
+  --color-error: oklch(62% 0.24 28);
+}
+
+@custom-variant dark (&:where([data-theme=night], [data-theme=night] *));
