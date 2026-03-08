@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/Components/Home/Sheard/Navbar";
 import Footer from "@/Components/Home/Sheard/Footer";
+import NextAuthprovider from "@/provider/NextAuthprovider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,20 +25,22 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.className} antialiased`}
-      >
-        <header className="md:max-w-11/12 mt-1.5 mb-3 md:mx-auto my-5">
-          <Navbar></Navbar>
-        </header>
-        <main className="md:max-w-11/12 mx-3 md:mx-auto mb-5 min-h-[calc(100vh-244px)]">
-          {children}
-        </main>
-        <footer className="">
-          <Footer></Footer>
-        </footer>
-      </body>
-    </html>
+    <NextAuthprovider>
+      <html lang="en">
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} ${poppins.className} antialiased`}
+        >
+          <header className="md:max-w-11/12 mt-1.5 mb-3 md:mx-auto my-5">
+            <Navbar></Navbar>
+          </header>
+          <main className="md:max-w-11/12 mx-3 md:mx-auto mb-5 min-h-[calc(100vh-244px)]">
+            {children}
+          </main>
+          <footer className="">
+            <Footer></Footer>
+          </footer>
+        </body>
+      </html>
+    </NextAuthprovider>
   );
 }

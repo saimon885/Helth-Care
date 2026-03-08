@@ -1,27 +1,52 @@
 "use client";
+import { CreateUser } from "@/app/action/server/auth";
 import Link from "next/link";
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const RegisterCard = () => {
   const [show, setShow] = useState(false);
 
-  const handlesubmit = (e) => {
+  const handlesubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
-    const Nid = form.nid.value;
-    const Name = form.name.value;
-    const Number = form.number.value;
+    const nid = form.nid.value;
+    const name = form.name.value;
+    const phone = form.number.value;
     const email = form.email.value;
     const password = form.password.value;
     const newData = {
-      Nid,
-      Name,
-      Number,
+      nid,
+      name,
+      phone,
       email,
       password,
     };
-    console.log(newData);
+    const result = await CreateUser(newData);
+    if (result.acknowledged) {
+      Swal.fire({
+        title: "Registration Successful 🎉",
+        text: "Your account has been created successfully. You can now start using our care services.",
+        icon: "success",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#3b82f6",
+        background: "#ffffff",
+        color: "#1f2937",
+        iconColor: "#3b82f6",
+        timer: 2500,
+        timerProgressBar: true,
+        showConfirmButton: false,
+      });
+    } else {
+      Swal.fire({
+        title: "Already Account Is Created.. please LogIn!",
+        icon: "error",
+        timer: 2500,
+        timerProgressBar: true,
+        showConfirmButton: false,
+      });
+    }
   };
 
   return (

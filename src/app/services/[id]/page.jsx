@@ -1,4 +1,5 @@
 import { getSingleService } from "@/app/action/server/service";
+import BookNowBtn from "@/Components/Buttons/BookNowBtn";
 
 const page = async ({ params }) => {
   const { id } = await params;
@@ -49,7 +50,7 @@ const page = async ({ params }) => {
           {/* action buttons */}
 
           <div className="flex gap-4 pt-4">
-            <button className="btn btn-primary px-8">Book Now</button>
+           <BookNowBtn></BookNowBtn>
 
             <button className="btn btn-outline">Contact Provider</button>
           </div>

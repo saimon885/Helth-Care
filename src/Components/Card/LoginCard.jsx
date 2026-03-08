@@ -1,20 +1,40 @@
 "use client";
 import Link from "next/link";
+import { signIn } from "next-auth/react";
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import Swal from "sweetalert2";
+import SocialButton from "../Buttons/SocialButton";
 
 const LoginCard = () => {
   const [show, setShow] = useState(false);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
 
-    const loginData = { email, password };
-    console.log(loginData);
+    const result = await signIn("credentials", {
+      email: email,
+      password: password,
+      redirect: false,
+    });
+    if (result?.ok) {
+      Swal.fire({
+        title: "Login Successful 🎉",
+        icon: "success",
+        confirmButtonText: "Continue",
+        confirmButtonColor: "#3b82f6",
+        background: "#ffffff",
+        color: "#1f2937",
+        iconColor: "#3b82f6",
+        timer: 2500,
+        timerProgressBar: true,
+        showConfirmButton: false,
+      });
+    }
   };
 
   return (
@@ -70,10 +90,7 @@ const LoginCard = () => {
 
         <div className="divider">OR</div>
 
-        <button className="btn w-full border border-gray-300 flex items-center gap-2 justify-center">
-          <FcGoogle size={22} />
-          Continue with Google
-        </button>
+        <SocialButton></SocialButton>
         <p className="text-center text-sm text-gray-500 mt-4">
           Dont have an account?
           <Link
