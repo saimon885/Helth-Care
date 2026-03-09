@@ -5,7 +5,7 @@ const page = async ({ params }) => {
   const { id } = await params;
 
   const service = await getSingleService(id);
-  console.log(service, id);
+  // console.log(service, id);
   return (
     <div className="max-w-7xl mx-auto px-4 py-12">
       <div className="grid lg:grid-cols-2 gap-10 items-start">
@@ -50,7 +50,7 @@ const page = async ({ params }) => {
           {/* action buttons */}
 
           <div className="flex gap-4 pt-4">
-           <BookNowBtn></BookNowBtn>
+            <BookNowBtn id={service?._id}></BookNowBtn>
 
             <button className="btn btn-outline">Contact Provider</button>
           </div>

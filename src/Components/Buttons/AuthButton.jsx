@@ -5,7 +5,7 @@ import Swal from "sweetalert2";
 
 const AuthButton = () => {
   const session = useSession();
-  console.log(session);
+  // console.log(session);
   const handleLogOut = () => {
     const res = signOut({ redirect: false });
     if (res) {

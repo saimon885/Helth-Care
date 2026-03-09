@@ -18,7 +18,10 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
-    ...(status === "authenticated" ? [{ name: "Dashboard", href: "/dashboard" }] : []),
+    { name: "MyBooking", href: "/mybooking" },
+    ...(status === "authenticated"
+      ? [{ name: "Dashboard", href: "/dashboard" }]
+      : []),
   ];
 
   const Links = (
@@ -32,17 +35,21 @@ const Navbar = () => {
   );
 
   return (
-    <header 
+    <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled 
-        ? "bg-base-100/80 backdrop-blur-md shadow-sm border-b border-base-300" 
-        : "bg-base-100 border-b border-transparent"
+        isScrolled
+          ? "bg-base-100/80 backdrop-blur-md shadow-sm border-b border-base-300"
+          : "bg-base-100 border-b border-transparent"
       }`}
     >
       <div className="navbar max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden p-0 mr-2">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost lg:hidden p-0 mr-2"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"

@@ -1,9 +1,9 @@
 "use client";
-import { useSession } from "next-auth/react"; // useSession ব্যবহার করুন
+import { useSession } from "next-auth/react";
 import { usePathname, useRouter } from "next/navigation";
 import React from "react";
 
-const BookNowBtn = () => {
+const BookNowBtn = ({ id }) => {
   const { data: session, status } = useSession();
 
   const isLogin = status === "authenticated";
@@ -12,9 +12,9 @@ const BookNowBtn = () => {
 
   const handleBook = () => {
     if (isLogin) {
-      alert("You are logged in!");
+      router.push(`/booking/${id}`);
     } else {
-      router.push(`/login?callbackUrl=${path}`);
+      router.push(`/login?callbackUrl=/booking/${id}`);
     }
   };
   const isLoading = status === "loading";

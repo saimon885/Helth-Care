@@ -3,13 +3,14 @@ import Link from "next/link";
 import { signIn } from "next-auth/react";
 import React, { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import Swal from "sweetalert2";
 import SocialButton from "../Buttons/SocialButton";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const LoginCard = () => {
   const [show, setShow] = useState(false);
-
+  const router = useRouter();
+  const params = useSearchParams();
   const handleSubmit = async (e) => {
     e.preventDefault();
     const form = e.target;
@@ -21,18 +22,21 @@ const LoginCard = () => {
       password: password,
       redirect: false,
     });
-    if (result?.ok) {
+    if (!result.ok) {
       Swal.fire({
-        title: "Login Successful 🎉",
+        title: "Error!",
+        text: "Invalid Credantials!",
+        icon: "error",
+        confirmButtonText: "OK",
+      });
+    } else {
+      Swal.fire({
+        title: "Success!",
+        text: "Login Successfully",
         icon: "success",
-        confirmButtonText: "Continue",
-        confirmButtonColor: "#3b82f6",
-        background: "#ffffff",
-        color: "#1f2937",
-        iconColor: "#3b82f6",
-        timer: 2500,
-        timerProgressBar: true,
-        showConfirmButton: false,
+        confirmButtonText: "OK",
+      }).then(() => {
+        router.push(params.get("callbackUrl") || "/");
       });
     }
   };
