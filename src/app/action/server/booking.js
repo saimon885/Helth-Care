@@ -4,6 +4,8 @@ import { authOptions } from "@/lib/AuthOptions";
 import { Collections, dbConnect } from "@/lib/dbConnect";
 import { ObjectId } from "mongodb";
 import { getServerSession } from "next-auth";
+import { revalidatePath } from "next/cache";
+import { cache } from "react";
 
 export const createBooking = async ({ bookingData }) => {
   const {
@@ -35,7 +37,7 @@ export const createBooking = async ({ bookingData }) => {
   );
   return { success: !!createResult.insertedId };
 };
-export const getmyBooking = async () => {
+export const getmyBooking = cache(async () => {
   const { user } = (await getServerSession(authOptions)) || {};
   if (!user) return { success: false };
   const query = { email: user?.email };
@@ -48,7 +50,7 @@ export const getmyBooking = async () => {
   }));
 
   return Getbook;
-};
+});
 
 export const UpdateBooking = async (id) => {
   const { user } = (await getServerSession(authOptions)) || {};
@@ -63,12 +65,20 @@ export const UpdateBooking = async (id) => {
     query,
     updatedata,
   );
-  return { scuccess: result.modifiedCount > 0 };
+  if (result.acknowledged) {
+    revalidatePath("/mybooking");
+    return { success: true };
+  }
+  return { success: result.acknowledged > 0 };
 };
 export const DeleteBooking = async (id) => {
   const { user } = (await getServerSession(authOptions)) || {};
   if (!user) return { success: false };
   const query = { _id: new ObjectId(id) };
   const result = await dbConnect(Collections.Booking).deleteOne(query);
-  return { scuccess: result.deletedCount };
+  if (result.acknowledged) {
+    revalidatePath("/mybooking");
+    return { success: true };
+  }
+  return { success: result.acknowledged };
 };

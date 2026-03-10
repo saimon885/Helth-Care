@@ -22,7 +22,7 @@ const CancelBooking = ({ book }) => {
     if (confirm.isConfirmed) {
       const result = await UpdateBooking(book._id);
 
-      if (!result?.success) {
+      if (result?.success) {
         Swal.fire({
           title: "Cancelled!",
           text: "Your booking has been cancelled.",
@@ -30,7 +30,7 @@ const CancelBooking = ({ book }) => {
           timer: 1500,
         });
         // refresh the page to see changes
-        window.location.reload();
+        // window.location.reload();
       } else {
         Swal.fire("Error", "Could not cancel booking", "error");
       }
@@ -50,14 +50,14 @@ const CancelBooking = ({ book }) => {
     if (confirm.isConfirmed) {
       const result = await DeleteBooking(book._id);
 
-      if (!result.success) {
+      if (result.success) {
         Swal.fire({
           title: "Cancelled!",
           text: "Your booking has been Deleted.",
           icon: "success",
           timer: 1500,
         });
-        window.location.reload();
+        // window.location.reload();
       } else {
         Swal.fire("Error", "Could not delete booking", "error");
       }

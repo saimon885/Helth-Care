@@ -19,9 +19,6 @@ const Navbar = () => {
     { name: "Home", href: "/" },
     { name: "Services", href: "/services" },
     { name: "MyBooking", href: "/mybooking" },
-    ...(status === "authenticated"
-      ? [{ name: "Dashboard", href: "/dashboard" }]
-      : []),
   ];
 
   const Links = (

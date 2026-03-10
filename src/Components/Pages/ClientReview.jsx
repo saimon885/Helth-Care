@@ -1,4 +1,5 @@
 "use client";
+import { CreateFeedback } from "@/app/action/server/feedback";
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -15,17 +16,19 @@ const ClientReview = ({ service }) => {
     },
   });
 
-  const onSubmit = (data) => {
-    const reviewData = {
+  const onSubmit = async (data) => {
+    const payload = {
       serviceId: service?._id,
       serviceName: service?.name,
       rating: data.rating,
       message: data.message,
       submittedAt: new Date().toISOString(),
     };
-
-    console.log("Form Data:", reviewData);
-    reset();
+    const result = await CreateFeedback(payload);
+    if (result.success) {
+      alert("comment added");
+    }
+    // reset();
   };
 
   return (
