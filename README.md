@@ -1,12 +1,16 @@
-# Care.xyz - Baby Sitting & Elderly Care Service Platform 🏥👶👵
+# Home Care - Baby Sitting & Elderly Care Service Platform 🏥👶👵
 
-Care.xyz (Care.IO) is a reliable web application designed to provide trusted care services for children, elderly individuals, and those needing special medical attention at home. The platform bridges the gap between professional caregivers and families, ensuring a secure, easy-to-use, and accessible booking experience.
+Home Care (Care.IO) is a reliable web application designed to provide trusted care services for children, elderly individuals, and those needing special medical attention at home. The platform bridges the gap between professional caregivers and families, ensuring a secure, easy-to-use, and accessible booking experience.
 
 ![Home Page Preview](https://i.ibb.co.com/QjMLMR5P/image.png)
 
 ## 🌐 Live Demo
 
+<h2>
+
 [Check out the Live Site](https://care-app-phi.vercel.app/)
+
+</h2>
 
 ---
 
@@ -26,10 +30,9 @@ Care.xyz (Care.IO) is a reliable web application designed to provide trusted car
 
 ## 🛠️ Technologies Used
 
-- **Frontend:** React.js, Tailwind CSS, Lucide Icons
-- **Backend/Database:** Firebase Authentication, Firestore/JSON Server (as per implementation)
+- **Frontend/Backend/Database:** Next.js, Tailwind CSS, React Icons,Next-Auth,Sweetalert2,MongoDb
 - **Deployment:** Vercel
-- **Others:** React Router, Metadata for SEO, Zapshift resources for data.
+- **Others:** Metadata for SEO
 
 ---
 
@@ -38,7 +41,7 @@ Care.xyz (Care.IO) is a reliable web application designed to provide trusted car
 ### 🏠 1. Homepage
 
 - **Hero Banner:** Motivational sliders for caregiving.
-- **Mission Section:** Understanding the "Why" behind Care.xyz.
+- **Mission Section:** Understanding the "Why" behind Home Care.
 - **Services Overview:** Quick links to Baby Care, Elderly, and Sick Care.
 - **Testimonials:** User success stories and metrics.
 
