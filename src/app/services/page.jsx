@@ -11,8 +11,9 @@ const Services = async () => {
   const servicecData = await getServices();
   return (
     <div className="p-4 md:p-0">
-      <h1 className="text-2xl font-bold text-primary my-6 md:my-15 text-center">
-        Our Services
+      <h1 className="text-3xl font-bold text-primary my-6 md:my-15 text-center">
+        Our
+        <span className="text-secondary"> Services</span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
         {servicecData.map((service) => (

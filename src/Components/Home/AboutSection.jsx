@@ -5,14 +5,17 @@ const AboutSection = () => {
     <section className="bg-base-100 py-16 px-4 md:px-10 lg:px-20">
       <div className="max-w-7xl mx-auto space-y-16">
         <div className="text-center max-w-3xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4">About CareNest</h2>
-          <p className="text-gray-600">
-            CareNest is a trusted caregiving platform where users can easily
+          <h2 className="text-3xl text-secondary font-bold mb-4">
+            <span className="text-primary">About </span>
+            Home Care
+          </h2>
+          <p className="text-accent">
+            Home Care is a trusted caregiving platform where users can easily
             find and book reliable care services for their family members.
             Through our platform, families can access Baby Care, Elderly Care,
             and Sick Care services with confidence.
           </p>
-          <p className="text-gray-600 mt-4">
+          <p className="text-accent mt-4">
             Our goal is to make caregiving services simple, safe, and accessible
             for everyone. With just a few steps, users can select the service
             they need and book a professional caregiver for their loved ones.
@@ -42,8 +45,9 @@ const AboutSection = () => {
         </div>
 
         <div>
-          <h3 className="text-2xl font-semibold text-center mb-10">
-            How It Works
+          <h3 className="text-3xl font-bold text-secondary  text-center mb-10">
+            <span className="text-primary">It Works </span>
+             How
           </h3>
 
           <div className="grid md:grid-cols-3 gap-6">

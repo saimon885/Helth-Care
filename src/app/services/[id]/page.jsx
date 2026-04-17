@@ -2,6 +2,9 @@ import { getSingleService } from "@/app/action/server/service";
 import BookNowBtn from "@/Components/Buttons/BookNowBtn";
 import ClientReview from "@/Components/Pages/ClientReview";
 import { MdOutlineRateReview } from "react-icons/md";
+import Link from "next/link";
+import { BiLeftArrow } from "react-icons/bi";
+
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const service = await getSingleService(id);
@@ -9,7 +12,6 @@ export async function generateMetadata({ params }) {
   return {
     title: service?.title || "Details",
     description: service?.description || "",
-
     openGraph: {
       title: service?.title || "Details",
       description: service?.description || "",
@@ -22,7 +24,6 @@ export async function generateMetadata({ params }) {
         },
       ],
     },
-
     twitter: {
       card: "summary_large_image",
       title: service?.title || "Details",
@@ -31,14 +32,23 @@ export async function generateMetadata({ params }) {
     },
   };
 }
+
 const page = async ({ params }) => {
   const { id } = await params;
   const service = await getSingleService(id);
 
   return (
     <div className="max-w-7xl mx-auto px-4 pt-8">
+      <div className="mb-6">
+        <Link
+          href="/services"
+          className="inline-flex font-bold items-center gap-2 text-primary  hover:underline"
+        >
+          <BiLeftArrow></BiLeftArrow> Back
+        </Link>
+      </div>
+
       <div className="grid lg:grid-cols-2 gap-10 items-start mb-8">
-        {/* Image Section */}
         <div className="relative w-full h-[450px] rounded-2xl overflow-hidden shadow-2xl group">
           <img
             src={service?.image}
@@ -52,7 +62,6 @@ const page = async ({ params }) => {
           </div>
         </div>
 
-        {/* Content Section */}
         <div className="space-y-4">
           <h1 className="text-4xl font-extrabold text-slate-800 tracking-tight">
             {service?.name}

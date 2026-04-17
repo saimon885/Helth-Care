@@ -52,7 +52,14 @@ const MyBookingCard = ({ book }) => {
         </p>
         <p>
           <span className="font-medium">Booking Date:</span>{" "}
-          {new Date(createdAt).toLocaleString()}
+          {new Date(createdAt).toLocaleString("en-GB", {
+            day: "numeric",
+            month: "short",
+            year: "numeric",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: true,
+          })}
         </p>
       </div>
 

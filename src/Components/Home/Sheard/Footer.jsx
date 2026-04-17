@@ -1,12 +1,6 @@
 import Logo from "@/Components/Links/Logo";
 import React from "react";
-import {
-  FaFacebook,
- 
-  FaInstagram,
-  FaLinkedin,
-  FaGithub,
-} from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaLinkedin, FaGithub } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -20,17 +14,32 @@ const Footer = () => {
             with reliability and care.
           </p>
           <div className="flex gap-4 mt-2">
-            <a className="link link-hover hover:text-primary transition-colors cursor-pointer">
+            <a
+              href="https://www.facebook.com/saimon547674"
+              target="_blank"
+              className="link link-hover hover:text-primary transition-colors cursor-pointer"
+            >
               <FaFacebook size={20} />
             </a>
-            <a className="link link-hover hover:text-primary transition-colors cursor-pointer">
+            <a
+              href="https://github.com/saimon885"
+              target="_blank"
+              className="link link-hover hover:text-primary transition-colors cursor-pointer"
+            >
               <FaGithub size={20}></FaGithub>
-              
             </a>
-            <a className="link link-hover hover:text-primary transition-colors cursor-pointer">
+            <a
+              href="https://www.instagram.com/saimon547674/"
+              target="_blank"
+              className="link link-hover hover:text-primary transition-colors cursor-pointer"
+            >
               <FaInstagram size={20} />
             </a>
-            <a className="link link-hover hover:text-primary transition-colors cursor-pointer">
+            <a
+              href="https://www.linkedin.com/in/saimon-hossan?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+              target="_blank"
+              className="link link-hover hover:text-primary transition-colors cursor-pointer"
+            >
               <FaLinkedin size={20} />
             </a>
           </div>

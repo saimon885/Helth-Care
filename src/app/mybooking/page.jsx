@@ -10,8 +10,8 @@ const page = async () => {
   // console.log(data);
 
   return (
-    <div className="p-10">
-      <h1 className="text-2xl font-bold my-5 text-primary">
+    <div className="p-8">
+      <h1 className="text-3xl font-bold my-5 text-primary">
         My <span className="text-secondary">Bookings</span>
       </h1>
       {data?.length == 0 && <p>No bookings found.</p>}
